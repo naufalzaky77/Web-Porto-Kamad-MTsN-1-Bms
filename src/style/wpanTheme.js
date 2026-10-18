@@ -34,7 +34,7 @@ export const size = {
   h21: "1.3rem",
   h22: "1.05rem",
   h3: "0.89rem",
-  h31: "0,69rem",
+  h31: "0.69rem",
   h4: "0.55rem",
 };
 
