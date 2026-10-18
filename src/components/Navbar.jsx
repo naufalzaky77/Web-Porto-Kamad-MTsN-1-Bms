@@ -3,7 +3,7 @@
 import { Box } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
-import { navbarSx, navItemSx } from "../style/formStyles";
+import { navbarSx, navItemSx } from "../style/sxStyles";
 
 import { navItems } from "../constant/navItems";
 
