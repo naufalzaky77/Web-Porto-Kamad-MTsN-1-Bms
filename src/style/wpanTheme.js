@@ -5,7 +5,7 @@ export const colors = {
   primary: "#1874ff",
   hover: "#5395faa7",
   text: "#202124",
-  muted: "#797c86",
+  muted: "#94979f",
   background: "#e0e1e4",
   white: "#ffffff",
   black: "#000000",
