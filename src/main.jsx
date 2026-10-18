@@ -1,6 +1,20 @@
-import "../src/style/font/fontPJS.css";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App";
-import "./index.css";
+import { ThemeProvider } from "@mui/material/styles";
+import { GlobalStyles } from "@mui/material";
 
-createRoot(document.getElementById("root")).render(<App />);
+import wpanTheme from "./style/wpanTheme";
+import { resetStyle } from "./style/resetStyle";
+import App from "./App";
+
+import "./style/font/fontPJS.css";
+import "./style/animation.css";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <ThemeProvider theme={wpanTheme}>
+      <GlobalStyles styles={resetStyle} />
+      <App />
+    </ThemeProvider>
+  </StrictMode>,
+);
