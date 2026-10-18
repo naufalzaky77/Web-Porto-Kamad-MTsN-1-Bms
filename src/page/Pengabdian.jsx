@@ -18,7 +18,7 @@ export default function Pengabdian() {
     <>
       <PageHead>
         <PageTitle>Pengabdian</PageTitle>
-        <PageSub>Dokumentasi kegiatan dan kontribusi</PageSub>
+        <PageSubtitle>Dokumentasi kegiatan dan kontribusi</PageSubtitle>
       </PageHead>
 
       {wall.length === 0 ? (
