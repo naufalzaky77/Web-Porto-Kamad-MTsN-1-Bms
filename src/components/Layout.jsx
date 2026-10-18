@@ -3,7 +3,7 @@
 import { Box } from "@mui/material";
 
 import Navbar from "./Navbar";
-import { useScrollToTop } from "../hook/useScrollToTop";
+import useScrollToTop from "../hook/useScrollToTop";
 import { colors, size, weight } from "../style/wpanTheme";
 
 export default function Layout({ children }) {
