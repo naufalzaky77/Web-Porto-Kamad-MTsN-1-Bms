@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 
 import { colors, size, weight } from "../style/wpanTheme";
 import { certs } from "../data/certs";
-import { Chip, Chips } from "../components/ui/Chip";
+import Chip, { Chips } from "../components/ui/Chip";
 
 import PageHead from "../components/ui/PageHead";
 import PageTitle from "../components/ui/PageTitle";
@@ -31,7 +31,7 @@ export default function Karya() {
     <>
       <PageHead>
         <PageTitle>Karya</PageTitle>
-        <PageSub>Sertifikat dan proyek pilihan</PageSub>
+        <PageSubtitle>Sertifikat dan proyek pilihan</PageSubtitle>
       </PageHead>
 
       <Chips role="tablist" aria-label="Filter kategori">
