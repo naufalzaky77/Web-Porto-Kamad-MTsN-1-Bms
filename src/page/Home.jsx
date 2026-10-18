@@ -89,10 +89,10 @@ export default function Home() {
         <Box
           sx={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", mt: "2rem" }}
         >
-          <Btn to="/karya" variant="solid">
+          <Button to="/karya" variant="solid">
             Lihat karya
-          </Btn>
-          <Btn href="mailto:halo@example.com">Kontak</Btn>
+          </Button>
+          <Button href="mailto:halo@example.com">Kontak</Button>
         </Box>
       </Box>
 
