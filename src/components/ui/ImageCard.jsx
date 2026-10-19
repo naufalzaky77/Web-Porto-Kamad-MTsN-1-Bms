@@ -6,14 +6,14 @@ import PropTypes from "prop-types";
 import {
   imageCardSx,
   imageCardImgSx,
-  imagecardImgMasonrySx,
+  imageCardImgMasonrySx,
   imageCardTitleSx,
   imageCardSubSx,
   imageCardDateSx,
 } from "../../style/sxStyles";
 
 const ImageCard = ({ img, title, issuer, date, onClick, variant = "grid" }) => {
-  const imgSx = variant === "masonry" ? imagecardImgMasonrySx : imageCardImgSx;
+  const imgSx = variant === "masonry" ? imageCardImgMasonrySx : imageCardImgSx;
 
   return (
     <Box component="button" type="button" onClick={onClick} sx={imageCardSx}>

@@ -168,7 +168,7 @@ export const imageCardDateSx = {
 /**
  * STYLE MASONRY CARD
  */
-export const imagecardImgMasonrySx = {
+export const imageCardImgMasonrySx = {
   display: "block",
   width: "100%",
   height: "auto",
