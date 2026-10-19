@@ -25,7 +25,7 @@ const About = () => {
             key={text}
             sx={{
               ...desTextSx,
-              maxWidth: "50ch",
+              maxWidth: "clamp(50ch, 25vw, 60ch)",
               "& + &": { pt: "28px" },
               fontWeight: weight.regular,
               color: colors.text,

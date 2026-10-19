@@ -117,6 +117,7 @@ export const desTextSx = {
 export const aboutGridSx = {
   display: "grid",
   gridTemplateColumns: "1.20fr 0.80fr",
+  gap: "40px",
   // --- LAYAR HP ---
   "@media (max-width: 900px)": {
     gridTemplateColumns: "1fr",
