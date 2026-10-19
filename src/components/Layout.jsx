@@ -1,6 +1,7 @@
 // WRAPPER LAYOUT KESELURUHAN
 
 import { Box } from "@mui/material";
+import PropTypes from "prop-types";
 
 import Navbar from "./Navbar";
 import useScrollToTop from "../hook/useScrollToTop";
@@ -26,3 +27,7 @@ export default function Layout({ children }) {
     </>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
