@@ -29,6 +29,7 @@ export const size = {
   h2: "2.33rem",
   h3: "1.43rem",
   h4: "1.05rem",
+  h5: "0.85rem",
 };
 
 // KELUARGA FONT

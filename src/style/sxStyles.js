@@ -99,5 +99,79 @@ export const aboutRowSx = {
 };
 // --------------------------------------------------------------------
 
-// ------------------------ HOME ---------------------------------
+// ------------------------ KARYA ---------------------------------
+/**
+ * STYLE GRID KARTU 3 KOLOM
+ */
+export const karyaGridSx = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: "35px",
+};
+
+/**
+ * STYLE WRAPPER KARTU
+ */
+export const imageCardSx = {
+  display: "block",
+  width: "100%",
+  textAlign: "left",
+  transition: "transform 0.3s ease",
+  "&:hover": {
+    transform: "translateY(-6px)",
+  },
+  "&:hover img": {
+    boxShadow: `0 18px 40px ${colors.black}30`,
+  },
+};
+
+/**
+ * STYLE GAMBAR KARTU
+ */
+export const imageCardImgSx = {
+  display: "block",
+  width: "100%",
+  aspectRatio: "4 / 3",
+  objectFit: "cover",
+  transition: "box-shadow 0.3s ease",
+};
+
+/**
+ * STYLE JUDUL KARTU
+ */
+export const imageCardTitleSx = {
+  fontSize: size.h3,
+  fontWeight: weight.bold,
+  color: colors.primary,
+};
+
+/**
+ * STYLE SUBTITLE KARTU (LINE 2)
+ */
+export const imageCardSubSx = {
+  fontSize: size.h4,
+  fontWeight: weight.medium,
+  color: colors.text,
+};
+
+/**
+ * STYLE SUBTITLE KARTU (LINE 3)
+ */
+export const imageCardDateSx = {
+  fontSize: size.h5,
+  fontWeight: weight.regular,
+  color: colors.muted,
+};
+// --------------------------------------------------------------------
+
+// ------------------------ PAGE REUSABLE ---------------------------------
+/**
+ * STYLE JUDUL HALAMAN
+ */
+export const pageTitleSx = {
+  fontSize: size.h0,
+  fontWeight: weight.bold,
+  color: colors.primary,
+  mb: "42px",
+};
 // --------------------------------------------------------------------

@@ -1,22 +1,20 @@
 // BAGIAN JUDUL HALAMAN
 
 import { Box } from "@mui/material";
+import PropTypes from "prop-types";
 
-import { colors, size, weight } from "../../style/wpanTheme";
+import { pageTitleSx } from "../../style/sxStyles";
 
-export default function PageTitle({ children }) {
+const PageTitle = ({ children }) => {
   return (
-    <Box
-      component="h2"
-      sx={{
-        fontWeight: weight.bold,
-        fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-        lineHeight: 1,
-        letterSpacing: "-0.04em",
-        color: colors.text,
-      }}
-    >
+    <Box component="h2" sx={pageTitleSx}>
       {children}
     </Box>
   );
-}
+};
+
+PageTitle.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default PageTitle;
