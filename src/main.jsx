@@ -8,7 +8,6 @@ import { resetStyle } from "./style/resetStyle";
 import App from "./App";
 
 import "./style/font/fontPJS.css";
-import "./style/animation.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
