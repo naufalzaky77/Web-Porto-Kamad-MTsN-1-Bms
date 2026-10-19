@@ -4,7 +4,7 @@
 import { Box } from "@mui/material";
 
 import { colors, weight } from "../../style/wpanTheme";
-import { homeGridSx, desTextSx, aboutRowSx } from "../../style/sxStyles";
+import { aboutGridSx, desTextSx, aboutRowSx } from "../../style/sxStyles";
 
 import { profile } from "../../constant/profile";
 
@@ -12,7 +12,7 @@ const About = () => {
   return (
     <Box
       sx={{
-        ...homeGridSx,
+        ...aboutGridSx,
         alignItems: "start",
         pt: "35px",
         mt: "84px",
@@ -25,7 +25,7 @@ const About = () => {
             key={text}
             sx={{
               ...desTextSx,
-              maxWidth: "60ch",
+              maxWidth: "50ch",
               "& + &": { pt: "28px" },
               fontWeight: weight.regular,
               color: colors.text,

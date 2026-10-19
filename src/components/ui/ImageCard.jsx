@@ -18,20 +18,24 @@ const ImageCard = ({ img, title, issuer, date, onClick, variant = "grid" }) => {
   return (
     <Box component="button" type="button" onClick={onClick} sx={imageCardSx}>
       <Box component="img" src={img} alt={title} sx={imgSx} />
-      <Box
-        component="strong"
-        sx={{ ...imageCardTitleSx, display: "block", pt: "21px" }}
-      >
-        {title}
-      </Box>
-      <Box component="div" sx={imageCardSubSx}>
-        {issuer}
-      </Box>
-      {date && (
-        <Box component="div" sx={imageCardDateSx}>
-          {date}
+
+      <Box sx={{ pb: "21px" }}>
+        <Box
+          component="strong"
+          sx={{ ...imageCardTitleSx, display: "block", pt: "21px" }}
+        >
+          {title}
         </Box>
-      )}
+
+        <Box component="div" sx={imageCardSubSx}>
+          {issuer}
+        </Box>
+        {date && (
+          <Box component="div" sx={imageCardDateSx}>
+            {date}
+          </Box>
+        )}
+      </Box>
     </Box>
   );
 };

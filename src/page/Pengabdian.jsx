@@ -19,7 +19,15 @@ const Pengabdian = () => {
 
       <Box sx={pengabdianGridSx}>
         {walls.map((w, i) => (
-          <Box key={w.id} sx={{ breakInside: "avoid", mb: "1.5rem" }}>
+          <Box
+            key={w.id}
+            sx={{
+              breakInside: "avoid",
+              mb: "1.5rem",
+              display: "inline-block",
+              width: "100%",
+            }}
+          >
             <ImageCard
               img={w.img}
               title={w.title}

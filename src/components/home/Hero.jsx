@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <Box
       component="section"
-      sx={{ ...homeGridSx, alignItems: "center", pt: "21px", pl: "42px" }}
+      sx={{ ...homeGridSx, alignItems: "center", pt: "21px" }}
     >
       <Box>
         <Box>
@@ -27,7 +27,7 @@ const Hero = () => {
                 fontSize: item.size,
                 letterSpacing: item.spacing,
                 wordSpacing: item.word,
-                lineHeight: "7rem",
+                lineHeight: "clamp(3.5rem, 8vw, 7rem)",
               }}
             >
               {item.text}

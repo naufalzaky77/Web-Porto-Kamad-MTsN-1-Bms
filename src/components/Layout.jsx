@@ -15,11 +15,15 @@ export default function Layout({ children }) {
       <Box
         component="main"
         sx={{
-          width: "70%",
+          width: "80%",
           mx: "auto",
           pt: "7.5rem",
           pb: "4rem",
           minHeight: "100vh",
+          // --- LAYAR HP ---
+          "@media (max-width: 900px)": {
+            width: "92%",
+          },
         }}
       >
         {children}

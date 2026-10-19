@@ -6,7 +6,7 @@ import { colors, size, weight } from "./wpanTheme";
  */
 export const navbarSx = {
   position: "fixed",
-  top: "2rem",
+  top: "35px",
   left: "50%",
   transform: "translateX(-50%)",
   zIndex: 10,
@@ -16,6 +16,11 @@ export const navbarSx = {
   borderRadius: "15px",
   background: colors.white,
   boxShadow: `2px 2px 30px 12px ${colors.black}20`,
+  // --- LAYAR HP ---
+  "@media (max-width: 900px)": {
+    gap: "2px",
+    top: "21px",
+  },
 };
 
 /**
@@ -26,7 +31,7 @@ export const navItemSx = {
   py: "7px",
   borderRadius: "10px",
   textDecoration: "none",
-  fontSize: size.h22,
+  fontSize: size.h4,
   fontWeight: weight.semiBold,
   color: colors.muted,
   transition: "background 0.2s, color 0.2s",
@@ -35,16 +40,26 @@ export const navItemSx = {
     background: colors.primary,
     color: colors.white,
   },
+  // --- LAYAR HP ---
+  "@media (max-width: 900px)": {
+    px: "14px",
+    fontSize: size.h6,
+  },
 };
 // --------------------------------------------------------------------
 
 // ------------------------ HOME ---------------------------------
 /**
- * STYLE UNTUK GRID KANAN KIRI
+ * STYLE UNTUK GRID KANAN KIRI HERO
  */
 export const homeGridSx = {
   display: "grid",
-  gridTemplateColumns: "1.25fr 0.75fr",
+  gridTemplateColumns: "1.20fr 0.80fr",
+  // --- LAYAR HP ---
+  "@media (max-width: 900px)": {
+    gridTemplateColumns: "1fr",
+    pl: "28px",
+  },
 };
 
 /**
@@ -66,6 +81,10 @@ export const heroPhotoWrapSx = {
     background: `${colors.primary}40`,
     zIndex: -1,
   },
+  // --- LAYAR HP ---
+  "@media (max-width: 900px)": {
+    display: "none",
+  },
 };
 
 /**
@@ -86,6 +105,23 @@ export const heroPhotoSx = {
 export const desTextSx = {
   fontSize: size.h4,
   textAlign: "justify",
+  // --- LAYAR HP ---
+  "@media (max-width: 900px)": {
+    textAlign: "left",
+  },
+};
+
+/**
+ * STYLE GRID KHUSUS UNTUK INFO
+ */
+export const aboutGridSx = {
+  display: "grid",
+  gridTemplateColumns: "1.20fr 0.80fr",
+  // --- LAYAR HP ---
+  "@media (max-width: 900px)": {
+    gridTemplateColumns: "1fr",
+    gap: "30px", // Beri jarak saat ditumpuk
+  },
 };
 
 /**
@@ -107,13 +143,23 @@ export const karyaGridSx = {
   display: "grid",
   gridTemplateColumns: "repeat(3, 1fr)",
   gap: "35px",
+  // --- LAYAR TAB ---
+  "@media (max-width: 1024px)": {
+    gridTemplateColumns: "repeat(2, 1fr)",
+  },
+  // --- LAYAR HP ---
+  "@media (max-width: 900px)": {
+    gridTemplateColumns: "1fr",
+  },
 };
 
 /**
  * STYLE WRAPPER KARTU
  */
 export const imageCardSx = {
-  display: "block",
+  display: "flex",
+  flexDirection: "column",
+  height: "100%",
   width: "100%",
   textAlign: "left",
   transition: "transform 0.3s ease",
@@ -140,7 +186,7 @@ export const imageCardImgSx = {
  * STYLE JUDUL KARTU
  */
 export const imageCardTitleSx = {
-  fontSize: size.h3,
+  fontSize: `clamp(${size.h5}, 4vw, ${size.h3})`,
   fontWeight: weight.bold,
   color: colors.primary,
 };
@@ -149,7 +195,7 @@ export const imageCardTitleSx = {
  * STYLE SUBTITLE KARTU (LINE 2)
  */
 export const imageCardSubSx = {
-  fontSize: size.h4,
+  fontSize: `clamp(${size.h6}, 3vw, ${size.h4})`,
   fontWeight: weight.medium,
   color: colors.text,
 };
@@ -166,6 +212,24 @@ export const imageCardDateSx = {
 
 // ------------------------ PENGABDIAN ---------------------------------
 /**
+ * STYLE MASONRY GRID
+ */
+export const pengabdianGridSx = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: "35px",
+  alignItems: "start",
+  // --- LAYAR TAB ---
+  "@media (max-width: 1024px)": {
+    gridTemplateColumns: "repeat(2, 1fr)",
+  },
+  // --- LAYAR HP ---
+  "@media (max-width: 900px)": {
+    gridTemplateColumns: "1fr",
+  },
+};
+
+/**
  * STYLE MASONRY CARD
  */
 export const imageCardImgMasonrySx = {
@@ -174,14 +238,6 @@ export const imageCardImgMasonrySx = {
   height: "auto",
   transition: "box-shadow 0.3s ease",
 };
-
-/**
- * STYLE MASONRY GRID
- */
-export const pengabdianGridSx = {
-  columns: "3 260px",
-  columnGap: "1.25rem",
-};
 // --------------------------------------------------------------------
 
 // ------------------------ PAGE REUSEABLE ---------------------------------
@@ -189,7 +245,7 @@ export const pengabdianGridSx = {
  * STYLE JUDUL HALAMAN
  */
 export const pageTitleSx = {
-  fontSize: size.h0,
+  fontSize: `clamp(${size.h2}, 6vw, ${size.h0})`,
   fontWeight: weight.bold,
   color: colors.primary,
   mb: "42px",
