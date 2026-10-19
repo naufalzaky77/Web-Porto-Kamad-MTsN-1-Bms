@@ -1,5 +1,6 @@
 import { colors, size, weight } from "./wpanTheme";
 
+// ------------------------ NAVBAR ---------------------------------
 /**
  * STYLE BAGIAN KAPSUL BELAKANG NAVBAR
  */
@@ -35,3 +36,68 @@ export const navItemSx = {
     color: colors.white,
   },
 };
+// --------------------------------------------------------------------
+
+// ------------------------ HOME ---------------------------------
+/**
+ * STYLE UNTUK GRID KANAN KIRI
+ */
+export const homeGridSx = {
+  display: "grid",
+  gridTemplateColumns: "1.25fr 0.75fr",
+};
+
+/**
+ * STYLE WRAPPING+AKSEN FOTO HERO
+ */
+export const heroPhotoWrapSx = {
+  position: "relative",
+  isolation: "isolate",
+  justifySelf: "center",
+  width: "min(100%, 360px)",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    right: "-2rem",
+    bottom: "-3rem",
+    width: "70%",
+    aspectRatio: "1",
+    borderRadius: "50%",
+    background: `${colors.primary}40`,
+    zIndex: -1,
+  },
+};
+
+/**
+ * STYLE FOTO HERO
+ */
+export const heroPhotoSx = {
+  display: "block",
+  width: "100%",
+  objectFit: "cover",
+  objectPosition: "center -10%",
+  transform: "scale(1.1)",
+  aspectRatio: "3 / 4",
+};
+
+/**
+ * STYLE TEKS DESKRIPSI HERO
+ */
+export const desTextSx = {
+  fontSize: size.h4,
+  textAlign: "justify",
+};
+
+/**
+ * STYLE BARIS BAGIAN INFO
+ */
+export const aboutRowSx = {
+  display: "flex",
+  justifyContent: "space-between",
+  py: "14px",
+  borderBottom: `1px solid ${colors.black}15`,
+};
+// --------------------------------------------------------------------
+
+// ------------------------ HOME ---------------------------------
+// --------------------------------------------------------------------

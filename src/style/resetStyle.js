@@ -9,7 +9,7 @@ export function resetStyle(theme) {
       fontSize: "1.0625rem",
       lineHeight: 1.6,
       color: colors.text,
-      background: colors.white,
+      background: colors.background,
       WebkitFontSmoothing: "antialiased",
       MozOsxFontSmoothing: "grayscale",
     },
