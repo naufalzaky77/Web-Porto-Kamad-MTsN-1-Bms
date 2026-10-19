@@ -40,7 +40,7 @@ const Hero = () => {
         <Box
           component="img"
           src={profile.photo}
-          alt={`Foto ${profile.name}`}
+          alt="Foto Profil"
           sx={heroPhotoSx}
         />
       </Box>
