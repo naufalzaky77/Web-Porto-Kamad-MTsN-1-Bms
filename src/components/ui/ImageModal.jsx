@@ -8,28 +8,61 @@ import { imageCardTitleSx, imageCardSubSx } from "../../style/sxStyles";
 
 const ImageModal = ({ open, onClose, img, title, issuer, date }) => {
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
-      <Box sx={{ position: "relative" }}>
-        <img
-          src={img}
-          alt={title}
-          style={{
-            display: "block",
-            width: "100%",
-            maxHeight: "80vh",
-            objectFit: "contain",
+    <Dialog
+      open={open}
+      onClose={onClose}
+      maxWidth={false}
+      sx={{
+        "& .MuiDialog-paper": {
+          background: "transparent",
+          boxShadow: "none",
+          overflow: "hidden",
+          m: 2,
+        },
+      }}
+    >
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            background: colors.black,
+            borderRadius: "12px 12px 0 0",
+            overflow: "hidden",
           }}
-        />
-      </Box>
-
-      <Box sx={{ py: "14px", px: "28px", background: colors.background }}>
-        <Box component="h3" sx={imageCardTitleSx}>
-          {title}
+        >
+          <img
+            src={img}
+            alt={title}
+            style={{
+              display: "block",
+              maxWidth: "90vw",
+              maxHeight: "75vh",
+              width: "auto",
+              height: "auto",
+              objectFit: "contain",
+            }}
+          />
         </Box>
 
-        <Box sx={imageCardSubSx}>
-          <Box component="p">
-            {issuer} - {date}
+        <Box
+          sx={{
+            py: "14px",
+            px: "28px",
+            background: colors.background,
+            borderRadius: "0 0 12px 12px",
+            maxWidth: "90vw",
+          }}
+        >
+          <Box component="h3" sx={imageCardTitleSx}>
+            {title}
+          </Box>
+
+          <Box sx={imageCardSubSx}>
+            <Box component="p">
+              {[issuer, date].filter(Boolean).join(" - ")}
+            </Box>
           </Box>
         </Box>
       </Box>

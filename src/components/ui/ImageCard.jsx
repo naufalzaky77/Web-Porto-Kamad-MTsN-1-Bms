@@ -6,15 +6,18 @@ import PropTypes from "prop-types";
 import {
   imageCardSx,
   imageCardImgSx,
+  imagecardImgMasonrySx,
   imageCardTitleSx,
   imageCardSubSx,
   imageCardDateSx,
 } from "../../style/sxStyles";
 
-const ImageCard = ({ img, title, issuer, date, onClick }) => {
+const ImageCard = ({ img, title, issuer, date, onClick, variant = "grid" }) => {
+  const imgSx = variant === "masonry" ? imagecardImgMasonrySx : imageCardImgSx;
+
   return (
     <Box component="button" type="button" onClick={onClick} sx={imageCardSx}>
-      <Box component="img" src={img} alt={title} sx={imageCardImgSx} />
+      <Box component="img" src={img} alt={title} sx={imgSx} />
       <Box
         component="strong"
         sx={{ ...imageCardTitleSx, display: "block", pt: "21px" }}
@@ -24,9 +27,11 @@ const ImageCard = ({ img, title, issuer, date, onClick }) => {
       <Box component="div" sx={imageCardSubSx}>
         {issuer}
       </Box>
-      <Box component="div" sx={imageCardDateSx}>
-        {date}
-      </Box>
+      {date && (
+        <Box component="div" sx={imageCardDateSx}>
+          {date}
+        </Box>
+      )}
     </Box>
   );
 };
@@ -37,6 +42,7 @@ ImageCard.propTypes = {
   issuer: PropTypes.string,
   date: PropTypes.string,
   onClick: PropTypes.func.isRequired,
+  variant: PropTypes.oneOf(["grid", "masonry"]),
 };
 
 export default ImageCard;

@@ -164,6 +164,26 @@ export const imageCardDateSx = {
 };
 // --------------------------------------------------------------------
 
+// ------------------------ PENGABDIAN ---------------------------------
+/**
+ * STYLE MASONRY CARD
+ */
+export const imagecardImgMasonrySx = {
+  display: "block",
+  width: "100%",
+  height: "auto",
+  transition: "box-shadow 0.3s ease",
+};
+
+/**
+ * STYLE MASONRY GRID
+ */
+export const pengabdianGridSx = {
+  columns: "3 260px",
+  columnGap: "1.25rem",
+};
+// --------------------------------------------------------------------
+
 // ------------------------ PAGE REUSEABLE ---------------------------------
 /**
  * STYLE JUDUL HALAMAN

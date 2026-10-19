@@ -3,108 +3,47 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
 
-import { colors, size, weight } from "../style/wpanTheme";
-import { wall } from "../data/wall";
+import { pengabdianGridSx } from "../style/sxStyles";
 
-import PageHead from "../components/ui/PageHead";
+import { walls } from "../data/walls";
 import PageTitle from "../components/ui/PageTitle";
-import PageSubtitle from "../components/ui/PageSubtitle";
-import Lightbox from "../components/Lightbox";
+import ImageCard from "../components/ui/ImageCard";
+import ImageModal from "../components/ui/ImageModal";
 
-export default function Pengabdian() {
-  const [activeIdx, setActiveIdx] = useState(null);
+const Pengabdian = () => {
+  const [selectedIdx, setSelectedIdx] = useState(null);
 
   return (
     <>
-      <PageHead>
-        <PageTitle>Pengabdian</PageTitle>
-        <PageSubtitle>Dokumentasi kegiatan dan kontribusi</PageSubtitle>
-      </PageHead>
+      <PageTitle>Pengabdian</PageTitle>
 
-      {wall.length === 0 ? (
-        <Box
-          sx={{
-            p: "2rem",
-            border: `1px dashed ${colors.background}`,
-            borderRadius: "12px",
-            textAlign: "center",
-            color: colors.muted,
-          }}
-        >
-          Belum ada data. Isi <code>src/data/wall.js</code>.
-        </Box>
-      ) : (
-        <Box
-          component="ul"
-          sx={{
-            columns: "3 260px",
-            columnGap: "1.25rem",
-          }}
-        >
-          {wall.map((w, i) => (
-            <Box
-              component="li"
-              key={w.id}
-              sx={{ breakInside: "avoid", mb: "1.5rem" }}
-            >
-              <Box
-                component="button"
-                type="button"
-                onClick={() => setActiveIdx(i)}
-                aria-label={`Buka ${w.title}`}
-                sx={{
-                  display: "block",
-                  width: "100%",
-                  textAlign: "left",
-                  "&:hover img": { transform: "scale(.98)" },
-                }}
-              >
-                <Box
-                  component="img"
-                  src={w.img}
-                  alt={w.title}
-                  sx={{
-                    display: "block",
-                    width: "100%",
-                    objectFit: "cover",
-                    borderRadius: "20px",
-                    transition: "transform 0.3s",
-                    background: colors.background,
-                  }}
-                />
-                <Box
-                  component="strong"
-                  sx={{
-                    display: "block",
-                    mt: "0.75rem",
-                    fontWeight: weight.semiBold,
-                    fontSize: "1.1rem",
-                    lineHeight: 1.3,
-                    color: colors.text,
-                  }}
-                >
-                  {w.title}
-                </Box>
-                <Box
-                  component="span"
-                  sx={{ color: colors.muted, fontSize: "0.95rem" }}
-                >
-                  {w.desc}
-                </Box>
-              </Box>
-            </Box>
-          ))}
-        </Box>
-      )}
+      <Box sx={pengabdianGridSx}>
+        {walls.map((w, i) => (
+          <Box key={w.id} sx={{ breakInside: "avoid", mb: "1.5rem" }}>
+            <ImageCard
+              img={w.img}
+              title={w.title}
+              issuer={w.issuer}
+              date={w.date}
+              onClick={() => setSelectedIdx(i)}
+              variant="masonry"
+            />
+          </Box>
+        ))}
+      </Box>
 
-      {activeIdx !== null && (
-        <Lightbox
-          items={wall}
-          index={activeIdx}
-          onClose={() => setActiveIdx(null)}
-          onNavigate={setActiveIdx}
+      {selectedIdx !== null && (
+        <ImageModal
+          open={true}
+          onClose={() => setSelectedIdx(null)}
+          img={walls[selectedIdx].img}
+          title={walls[selectedIdx].title}
+          issuer={walls[selectedIdx].issuer}
+          date={walls[selectedIdx].date}
         />
       )}
     </>
   );
-}
+};
+
+export default Pengabdian;
