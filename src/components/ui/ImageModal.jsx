@@ -48,8 +48,8 @@ const ImageModal = ({ open, onClose, img, title, issuer, date }) => {
 
         <Box
           sx={{
-            py: "14px",
-            px: "28px",
+            py: "clamp(7px, 2vw, 14px)",
+            px: "clamp(14px, 4vw, 28px)",
             background: colors.background,
             borderRadius: "0 0 12px 12px",
             maxWidth: "90vw",

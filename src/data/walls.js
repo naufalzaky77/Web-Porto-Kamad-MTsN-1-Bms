@@ -23,7 +23,7 @@ export const walls = [
     id: 3,
     title: "Workshop",
     date: "30 September 2026",
-    issuer: "Pemanfaatan Media Interaktif Berbasis teknologi Digital",
+    issuer: "Pemanfaatan Media Interaktif Berbasis Teknologi Digital",
     img: wall3,
   },
 ];
