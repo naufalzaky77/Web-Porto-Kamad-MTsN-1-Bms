@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
 
-import { colors, size, weight } from "../style/wpanTheme";
 import { karyaGridSx } from "../style/sxStyles";
 
 import { certs } from "../data/certs";
